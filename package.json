@@ -1,11 +1,14 @@
 {
   "name": "crud-app",
-  "version": "3.3.0",
-  "private": true,
-  "homepage": "https://safdarjamal.github.io/crud-app/",
-  "author": {
-    "name": "Safdar Jamal",
-    "url": "https://safdarjamal.github.io"
+  "version": "0.1.0",
+  "homepage": "/crud-app",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
@@ -15,14 +18,6 @@
     "react-dom": "^18.2.0",
     "react-scripts": "^5.0.1",
     "sweetalert2": "^11.4.18"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
