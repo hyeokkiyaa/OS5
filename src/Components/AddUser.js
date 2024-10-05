@@ -3,6 +3,8 @@ import { Button, Col, Form } from "react-bootstrap";
 import { addUser } from "../Redux/actions/userActions";
 import ModalComponent from "./UI/ModalComponent";
 import { connect } from "react-redux";
+import { ReactComponent as PlusCircleIcon } from './plus-circle.svg';
+
 
 const initialUserData = {
   name: "",
@@ -50,14 +52,15 @@ const AddUser = ({ userData, addUser }) => {
 
   return (
     <>
+
       <Col>
         <Button variant="outline-primary" className="pe-none">
-        All Users <span class="badge bg-secondary">{userData.length}</span>
+          No. of Users <span class="badge bg-secondary">{userData.length}</span>
         </Button>
       </Col>
       <Col className="text-end">
         <Button variant="primary" onClick={handleAdd}>
-          Add user
+          <PlusCircleIcon width="20" height="20" />
         </Button>
       </Col>
 
@@ -79,6 +82,7 @@ const AddUser = ({ userData, addUser }) => {
           }
         />
       )}
+
     </>
   );
 };
@@ -87,7 +91,7 @@ const NewUserFormComponent = ({ newUser, setnewUser }) => {
   return (
     <div>
       <Form>
-        <Form.Group className="mb-3">
+        <Form.Group className="mb-3 form-group-zero-margin">
           <Form.Label>Name</Form.Label>
           <Form.Control
             type="text"
