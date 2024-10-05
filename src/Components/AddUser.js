@@ -9,7 +9,7 @@ import { ReactComponent as PlusCircleIcon } from './plus-circle.svg';
 const initialUserData = {
   name: "",
   email: "",
-  designation: "Software Engineer",
+  type: "Adult",
   isActive: false,
 };
 
@@ -30,7 +30,7 @@ const AddUser = ({ userData, addUser }) => {
       body: JSON.stringify({
         name: newUser.name,
         email: newUser.email,
-        designation: newUser.designation,
+        type: newUser.type,
         isActive: newUser.isActive === "true" ? true : false,
       }),
     })
@@ -55,7 +55,7 @@ const AddUser = ({ userData, addUser }) => {
 
       <Col>
         <Button variant="outline-primary" className="pe-none">
-          No. of Users <span class="badge bg-secondary">{userData.length}</span>
+          No. of Users <span className="badge bg-secondary">{userData.length}</span>
         </Button>
       </Col>
       <Col className="text-end">
@@ -113,22 +113,22 @@ const NewUserFormComponent = ({ newUser, setnewUser }) => {
           />
         </Form.Group>
         <Form.Group className="mb-3">
-          <Form.Label>Designation</Form.Label>
+          <Form.Label>Type</Form.Label>
           <Form.Control
             as="select"
-            name="designation"
-            value={newUser.designation}
+            name="type"
+            value={newUser.type}
             onChange={(e) =>
               setnewUser({
                 ...newUser,
-                designation: e.target.value,
+                type: e.target.value,
               })
             }
           >
-            <option value="Software Engineer">Software Engineer</option>
-            <option value="Sr. Software Engineer">Sr. Software Engineer</option>
-            <option value="Tech Lead">Tech Lead</option>
-            <option value="Product Manager">Product Manager</option>
+            <option value="Kid">Kid</option>
+            <option value="Student">Student</option>
+            <option value="Adult">Adult</option>
+            <option value="Senior">Senior</option>
           </Form.Control>
         </Form.Group>
 

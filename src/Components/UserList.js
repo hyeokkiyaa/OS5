@@ -69,7 +69,7 @@ const UserList = ({ userData, fetchAllUsers, deleteUser, updateUser }) => {
         id: selectedUser.id,
         name: selectedUser.name,
         email: selectedUser.email,
-        designation: selectedUser.designation,
+        type: selectedUser.type,
         isActive: selectedUser.isActive === "true" ? true : false,
       }),
     })
@@ -103,7 +103,7 @@ const UserList = ({ userData, fetchAllUsers, deleteUser, updateUser }) => {
                   <th>Id</th>
                   <th>Name</th>
                   <th>Email</th>
-                  <th>Designation</th>
+                  <th>Type</th>
                   <th>Status</th>
                   <th></th>
                 </tr>
@@ -114,7 +114,7 @@ const UserList = ({ userData, fetchAllUsers, deleteUser, updateUser }) => {
                     <td>{ele.id}</td>
                     <td className="fw-bold">{ele.name}</td>
                     <td>{ele.email}</td>
-                    <td>{ele.designation}</td>
+                    <td>{ele.type}</td>
                     <td
                       className={`fw-bold ${
                         ele.isActive ? "text-success" : "text-danger"
@@ -225,22 +225,22 @@ const FormComponent = ({ selecteduser, setselecteduser }) => {
           />
         </Form.Group>
         <Form.Group className="mb-3">
-          <Form.Label>Designation</Form.Label>
+          <Form.Label>Type</Form.Label>
           <Form.Control
             as="select"
-            name="designation"
-            value={selecteduser.designation}
+            name="type"
+            value={selecteduser.type}
             onChange={(e) =>
               setselecteduser({
                 ...selecteduser,
-                designation: e.target.value,
+                type: e.target.value,
               })
             }
           >
-            <option value="Software Engineer">Software Engineer</option>
-            <option value="Sr. Software Engineer">Sr. Software Engineer</option>
-            <option value="Tech Lead">Tech Lead</option>
-            <option value="Product Manager">Product Manager</option>
+            <option value="Kid">Kid</option>
+            <option value="Student">Student</option>
+            <option value="Adult">Adult</option>
+            <option value="Senior">Senior</option>
           </Form.Control>
         </Form.Group>
 

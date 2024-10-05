@@ -1,45 +1,17 @@
 {
   "users": [
     {
-      "id": "1",
-      "name": "Marco Jarvis",
-      "email": "testuser22@t.com",
-      "designation": "Sr. Software Engineer",
-      "isActive": false
-    },
-    {
-      "id": "2",
-      "name": "Craig Morales",
-      "email": "testuser5@test.com",
-      "designation": "Tech Lead",
+      "id": "25f8",
+      "name": "Hyeokmin",
+      "email": "khm3806070@gmail.com",
+      "type": "Kid",
       "isActive": true
     },
     {
-      "id": "3",
-      "name": "Caitlin",
-      "email": "testuser7@test.com",
-      "designation": "Product Manager",
-      "isActive": false
-    },
-    {
-      "id": "4",
-      "name": "Joseph Drake",
-      "email": "testuser8@test.com",
-      "designation": "Software Engineer",
-      "isActive": false
-    },
-    {
-      "id": "5",
-      "name": "Surbhi Dighe",
-      "email": "testuser9@test.com",
-      "designation": "Software Engineer",
-      "isActive": false
-    },
-    {
-      "id": "c7b1",
-      "name": "Hyeokmin",
-      "email": "hykwon@gmail.com",
-      "designation": "Software Engineer",
+      "id": "7f75",
+      "name": "Ju",
+      "email": "aaa@gmail.com",
+      "type": "Adult",
       "isActive": true
     }
   ]
