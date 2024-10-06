@@ -4,6 +4,8 @@
       "id": "25f8",
       "name": "Hyeokmin",
       "email": "khm3806070@gmail.com",
+      "phone": "01086957574",
+      "gender": "M",
       "type": "Kid",
       "isActive": true
     },
@@ -11,7 +13,63 @@
       "id": "7f75",
       "name": "Ju",
       "email": "aaa@gmail.com",
+      "phone": "01012347574",
+      "gender": "F",
       "type": "Adult",
+      "isActive": true
+    },
+    {
+      "id": "18c1",
+      "name": "Junseo Jung",
+      "email": "jso@gmail.com",
+      "phone": "01096585741",
+      "gender": "M",
+      "type": "Student",
+      "isActive": true
+    },
+    {
+      "id": "45a2",
+      "name": "Sumin Kim",
+      "email": "sumin.kim@gmail.com",
+      "phone": "01098765432",
+      "gender": "F",
+      "type": "Student",
+      "isActive": false
+    },
+    {
+      "id": "bc92",
+      "name": "Minho Lee",
+      "email": "minho.lee@gmail.com",
+      "phone": "01054327654",
+      "gender": "M",
+      "type": "Adult",
+      "isActive": true
+    },
+    {
+      "id": "91d3",
+      "name": "Eunji Park",
+      "email": "eunji.park@gmail.com",
+      "phone": "01076543218",
+      "gender": "F",
+      "type": "Senior",
+      "isActive": true
+    },
+    {
+      "id": "7ab4",
+      "name": "Donghyun Choi",
+      "email": "donghyun.choi@gmail.com",
+      "phone": "01012341234",
+      "gender": "M",
+      "type": "Kid",
+      "isActive": false
+    },
+    {
+      "id": "f8e2",
+      "name": "Seoyoon Lim",
+      "email": "seoyoon.lim@gmail.com",
+      "phone": "01078965412",
+      "gender": "F",
+      "type": "Student",
       "isActive": true
     }
   ]

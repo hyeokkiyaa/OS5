@@ -69,6 +69,8 @@ const UserList = ({ userData, fetchAllUsers, deleteUser, updateUser }) => {
         id: selectedUser.id,
         name: selectedUser.name,
         email: selectedUser.email,
+        phone: selectedUser.phone,
+        gender: selectedUser.gender,
         type: selectedUser.type,
         isActive: selectedUser.isActive === "true" ? true : false,
       }),
@@ -103,6 +105,8 @@ const UserList = ({ userData, fetchAllUsers, deleteUser, updateUser }) => {
                   <th>Id</th>
                   <th>Name</th>
                   <th>Email</th>
+                  <th>Phone No.</th>
+                  <th>Gender</th>
                   <th>Type</th>
                   <th>Status</th>
                   <th></th>
@@ -114,11 +118,12 @@ const UserList = ({ userData, fetchAllUsers, deleteUser, updateUser }) => {
                     <td>{ele.id}</td>
                     <td className="fw-bold">{ele.name}</td>
                     <td>{ele.email}</td>
+                    <td>{ele.phone}</td>
+                    <td>{ele.gender}</td>
                     <td>{ele.type}</td>
                     <td
-                      className={`fw-bold ${
-                        ele.isActive ? "text-success" : "text-danger"
-                      }`}
+                      className={`fw-bold ${ele.isActive ? "text-success" : "text-danger"
+                        }`}
                     >
                       {ele.isActive ? "Active" : "Inactive"}
                     </td>
@@ -149,7 +154,7 @@ const UserList = ({ userData, fetchAllUsers, deleteUser, updateUser }) => {
       </Container>
 
 
-      
+
       {showDeleteModal && (
         <ModalComponent
           showModal={showDeleteModal}
@@ -223,7 +228,37 @@ const FormComponent = ({ selecteduser, setselecteduser }) => {
               setselecteduser({ ...selecteduser, email: e.target.value })
             }
           />
+          <Form.Group className="mb-3">
+            <Form.Label>Phone No.</Form.Label>
+            <Form.Control
+              type="text"
+              placeholder="010-xxxx-xxxx"
+              name="phone"
+              value={selecteduser.phone}
+              onChange={(e) =>
+                setselecteduser({ ...selecteduser, phone: e.target.value })
+              }
+            />
+          </Form.Group>
         </Form.Group>
+        <Form.Group className="mb-3">
+          <Form.Label>Gender</Form.Label>
+          <Form.Control
+            as="select"
+            name="gender"
+            value={selecteduser.type}
+            onChange={(e) =>
+              setselecteduser({
+                ...selecteduser,
+                gender: e.target.value,
+              })
+            }
+          >
+            <option value="M">Male</option>
+            <option value="F">Female</option>
+          </Form.Control>
+        </Form.Group>
+
         <Form.Group className="mb-3">
           <Form.Label>Type</Form.Label>
           <Form.Control

@@ -9,6 +9,8 @@ import { ReactComponent as PlusCircleIcon } from './plus-circle.svg';
 const initialUserData = {
   name: "",
   email: "",
+  phone: "",
+  gender: "M",
   type: "Adult",
   isActive: false,
 };
@@ -30,6 +32,8 @@ const AddUser = ({ userData, addUser }) => {
       body: JSON.stringify({
         name: newUser.name,
         email: newUser.email,
+        phone: newUser.phone,
+        gender: newUser.gender,
         type: newUser.type,
         isActive: newUser.isActive === "true" ? true : false,
       }),
@@ -112,6 +116,37 @@ const NewUserFormComponent = ({ newUser, setnewUser }) => {
             onChange={(e) => setnewUser({ ...newUser, email: e.target.value })}
           />
         </Form.Group>
+        <Form.Group className="mb-3 form-group-zero-margin">
+          <Form.Label>Phone No.</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="010xxxxxxxx"
+            name="phone"
+            value={newUser.phone}
+            onChange={(e) => setnewUser({ ...newUser, phone: e.target.value })}
+            required
+          />
+        </Form.Group>
+
+        <Form.Group className="mb-3">
+          <Form.Label>Gender</Form.Label>
+          <Form.Control
+            as="select"
+            name="gender"
+            value={newUser.gender}
+            onChange={(e) =>
+              setnewUser({
+                ...newUser,
+                gender: e.target.value,
+              })
+            }
+          >
+            <option value="M">Male</option>
+            <option value="F">Female</option>
+     
+          </Form.Control>
+        </Form.Group>
+        
         <Form.Group className="mb-3">
           <Form.Label>Type</Form.Label>
           <Form.Control
@@ -150,7 +185,7 @@ const NewUserFormComponent = ({ newUser, setnewUser }) => {
           </Form.Control>
         </Form.Group>
       </Form>
-    </div>
+    </div >
   );
 };
 
