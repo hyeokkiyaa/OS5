@@ -5,7 +5,7 @@ import {
   updateUser,
 } from "../Redux/actions/userActions";
 import { connect } from "react-redux";
-import { Col, Container, Row, Table, Form, Button } from "react-bootstrap";
+import { Col, Container, Row, Table, Form } from "react-bootstrap";
 import { AiFillEdit, AiFillDelete } from "react-icons/ai";
 import ModalComponent from "./UI/ModalComponent";
 import AddUser from "./AddUser";
@@ -17,7 +17,8 @@ const UserList = ({ userData, fetchAllUsers, deleteUser, updateUser }) => {
 
   useEffect(() => {
     getAllUsers();
-  }, []);
+  }, [getAllUsers]); 
+
 
   // on clicking delete icon
   const handleDelete = (userInfo) => {
